@@ -1,0 +1,38 @@
+#python program for temperature conventions...
+
+#Intialization og temperature and get the input from the user....
+
+temp = input("\nEnter the temperature in Fahrenheit or celsius:")
+degree = int(temp[:-1])
+convert_input = temp[-1]
+
+#Use if-else for finding the convention symbol "C" for Celcius & "f" for Fahrenheit... 
+#Convert Celcius to Fahrenheit or Fahrenheit to celcius....
+
+if convert_input.upper() == "C":
+  con_temp= int(round((9 * degree) / 5 + 32))
+  convert_output = "Fahrenheit"
+elif convert_input.upper() == "F":
+  con_temp = int(round((degree - 32) * 5 / 9))
+  convert_output = "Celsius"
+
+#Incorrect input please enter a proper convention symbol
+else:
+  print("\nPlease enter a proper convention....")
+  quit()
+
+#Print the result
+print("\nThe given temperature ", convert_input, "is converted into", con_temp, "degrees",convert_output, "....")
+
+
+Output:
+
+
+Enter the temperature in Fahrenheit or celsius: 104f
+
+The given temperature 104f is converted into 40 degrees Celsius....
+
+
+Enter the temperature in Fahrenheit or celsius: 104
+
+Please enter a proper convention....
