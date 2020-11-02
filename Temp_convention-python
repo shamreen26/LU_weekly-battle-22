@@ -2,37 +2,54 @@
 
 #Intialization of temperature and get the input from the user....
 
-temp = input("\nEnter the temperature in Fahrenheit or Celsius:")
+temp = input("\nEnter the temperature in Fahrenheit or Celsius or Kelvin:")
 degree = int(temp[:-1])
 convert_input = temp[-1]
 
-#Use if-else for finding the conversion symbol "C" for Celcius & "F" for Fahrenheit... 
-#Convert Celcius to Fahrenheit or Fahrenheit to celcius....
+#Use if-else for finding the conversion symbol "C" for Celcius & "F" for Fahrenheit &"K" for Kelvin... 
 
+#Convert Celcius to Fahrenheit,Kelvin....
 if convert_input.upper() == "C":
-  con_temp= int(round((9 * degree) / 5 + 32))
-  convert_output = "Fahrenheit"
+  con_temp1 = int(round((9 * degree) / 5 + 32))
+  convert_output1 = "Fahrenheit"
+  con_temp2 = int(round((degree + 273.15)))
+  convert_output2 = "Kelvin"
+  
+#Convert Fahrenheit to Celsius,Kelvin....
 elif convert_input.upper() == "F":
-  con_temp = int(round((degree - 32) * 5 / 9))
-  convert_output = "Celsius"
-
-#Incorrect input please enter a proper conversion symbol....
+  con_temp1 = int(round((degree - 32) * 5 / 9))
+  convert_output1 = "Celsius"
+  con_temp2 = int(round((degree - 32) * 5/9 + 273.15))
+  convert_output2 = "Kelvin"
+  
+#Convert Kelvi to Celsius,Fahrenheit.... 
+elif convert_input.upper() == "K":
+  con_temp1 = int(round((degree - 273.15)))
+  convert_output1 = "Celsius"
+  con_temp2 = int(round((degree - 273.15) * 9/5 + 32))
+  convert_output2 = "Fahrenheit"
+  
+#Incorrect input please enter a proper conversion symbol...
 else:
   print("\nPlease enter a proper conversion symbol....")
   quit()
 
-#Print the result
-print("\nThe given temperature ", convert_input, "is converted into", con_temp, "degrees",convert_output, "....")
+#Print the result of conversions
+print("\nThe given temperature ", convert_input, "is converted into", con_temp1, "degrees",convert_output1, "and",con_temp2, "degrees",convert_output2, "....")
+
 
 
 Output:
 
 
-Enter the temperature in Fahrenheit or celsius: 104f
+Enter the temperature in Fahrenheit or Celsius or Kelvin: 104F
+The given temperature 104F is converted into 40 degrees Celsius and 313 degrees Kelvin ....
 
-The given temperature 104f is converted into 40 degrees Celsius....
+Enter the temperature in Fahrenheit or celsius or kelvin: 104C
+The given temperature 104C is converted into 219 degrees Fahrenheit and 377 degrees Kelvin ....
 
+Enter the temperature in Fahrenheit or celsius or kelvin: 104K
+The given temperature 104K is converted into -169 degrees Celsius and -272 degrees Fahrenheit ....
 
 Enter the temperature in Fahrenheit or celsius: 104
-
 Please enter a proper conversion symbol....
