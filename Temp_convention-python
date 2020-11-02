@@ -45,11 +45,11 @@ Output:
 Enter the temperature in Fahrenheit or Celsius or Kelvin: 104F
 The given temperature 104F is converted into 40 degrees Celsius and 313 degrees Kelvin ....
 
-Enter the temperature in Fahrenheit or celsius or kelvin: 104C
+Enter the temperature in Fahrenheit or Celsius or Kelvin: 104C
 The given temperature 104C is converted into 219 degrees Fahrenheit and 377 degrees Kelvin ....
 
-Enter the temperature in Fahrenheit or celsius or kelvin: 104K
+Enter the temperature in Fahrenheit or Celsius or Kelvin: 104K
 The given temperature 104K is converted into -169 degrees Celsius and -272 degrees Fahrenheit ....
 
-Enter the temperature in Fahrenheit or celsius: 104
+Enter the temperature in Fahrenheit or Celsius or Kelvin: 104
 Please enter a proper conversion symbol....
