@@ -9,6 +9,7 @@ convert_input = temp[-1]
 #Use if-else for finding the conversion symbol "C" for Celcius & "F" for Fahrenheit &"K" for Kelvin... 
 
 #Convert Celcius to Fahrenheit,Kelvin....
+
 if convert_input.upper() == "C":
   con_temp1 = int(round((9 * degree) / 5 + 32))
   convert_output1 = "Fahrenheit"
@@ -16,25 +17,29 @@ if convert_input.upper() == "C":
   convert_output2 = "Kelvin"
   
 #Convert Fahrenheit to Celsius,Kelvin....
+
 elif convert_input.upper() == "F":
   con_temp1 = int(round((degree - 32) * 5 / 9))
   convert_output1 = "Celsius"
   con_temp2 = int(round((degree - 32) * 5/9 + 273.15))
   convert_output2 = "Kelvin"
   
-#Convert Kelvi to Celsius,Fahrenheit.... 
+#Convert Kelvin to Celsius,Fahrenheit.... 
+
 elif convert_input.upper() == "K":
   con_temp1 = int(round((degree - 273.15)))
   convert_output1 = "Celsius"
   con_temp2 = int(round((degree - 273.15) * 9/5 + 32))
   convert_output2 = "Fahrenheit"
   
-#Incorrect input please enter a proper conversion symbol...
+#Incorrect input please enter a proper conversion symbol....
+
 else:
   print("\nPlease enter a proper conversion symbol....")
   quit()
 
-#Print the result of conversions
+#Print the result of conversions....
+
 print("\nThe given temperature ", convert_input, "is converted into", con_temp1, "degrees",convert_output1, "and",con_temp2, "degrees",convert_output2, "....")
 
 
